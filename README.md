@@ -8,7 +8,7 @@ Requires
 Run `pandoc` command with your configuration. For example:
 
 ```
-pandoc --filter pandoc-citeproc --bibliography=report.bib --variable classoption=twocolumn --variable papersize=letter --template template.tex -s report.md -o report.pdf
+pandoc report.md -s --template template.tex --bibliography=report.bib --csl=ieee.csl --filter pandoc-citeproc --variable classoption=twocolumn --variable papersize=letter --variable geometry=margin=1in -o report.pdf
 ```
 
 See [Creating a PDF](https://pandoc.org/MANUAL.html#creating-a-pdf) and [Variables for LaTeX](https://pandoc.org/MANUAL.html#variables-for-latex) from the pandoc website for more options.
